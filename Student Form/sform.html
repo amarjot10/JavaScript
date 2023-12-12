@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container bg-light p-5 my-5 rounded-5">
+      <div class="col-10 m-auto">
+        <main class="form-signin w-100 m-auto">
+          <form method="post" onsubmit="return loginsubmit()">
+            <h1 class="mb-3 fw-semibold">STUDENT FORM</h1>
+            <p class="fs-5 mt-4">Name of the Applicant</p>
+            <div class="div d-flex gap-4">
+              <div class="col form-floating">
+                <input
+                  type="text"
+                  class="form-control rounded-5"
+                  onkeyup="clrmsg()"
+                  id="fname"
+                  placeholder="First Name"
+                />
+                <label for="floatingInput">First Name</label>
+                <span id="fnameerror" class="badge text-danger"></span>
+              </div>
+              <div class="col form-floating">
+                <input
+                  type="text"
+                  class="form-control rounded-5"
+                  onkeyup="clrmsg()"
+                  id="lname"
+                  placeholder="Last Name"
+                />
+                <label for="floatingPassword">Last Name</label>
+                <span id="lnameerror" class="badge text-danger"></span>
+              </div>
+            </div>
+            <p class="fs-5 mt-3">Mother's and Father's Name</p>
+            <div class="div d-flex gap-4">
+              <div class="col form-floating">
+                <input
+                  type="text"
+                  class="form-control rounded-5"
+                  onkeyup="clrmsg()"
+                  id="mother"
+                  placeholder="Mother Name"
+                />
+                <label for="floatingInput">Mother's Name</label>
+                <span id="mothererror" class="badge text-danger"></span>
+              </div>
+              <div class="col form-floating">
+                <input
+                  type="text"
+                  class="form-control rounded-5"
+                  onkeyup="clrmsg()"
+                  id="father"
+                  placeholder="Father Name"
+                />
+                <label for="floatingPassword">Father's Name</label>
+                <span id="fathererror" class="badge text-danger"></span>
+              </div>
+            </div>
+            <p class="fs-5 mt-3">Email & Phone Number</p>
+            <div class="div d-flex gap-4">
+              <div class="col form-floating">
+                <input
+                  type="email"
+                  class="form-control rounded-5"
+                  onkeyup="clrmsg()"
+                  id="email"
+                  placeholder="Email"
+                />
+                <label for="floatingInput">Email</label>
+                <span id="emailerror" class="badge text-danger"></span>
+              </div>
+              <div class="col form-floating">
+                <input
+                  type="text"
+                  class="form-control rounded-5"
+                  onkeyup="clrmsg()"
+                  id="phone"
+                  placeholder="Phone Number"
+                />
+                <label for="floatingInput">+91</label>
+                <span id="phoneerror" class="badge text-danger"></span>
+              </div>
+            </div>
+            <p class="fs-5 mt-3">Date of Birth</p>
+            <div class="div d-flex my-2 gap-4">
+              <div class="col">
+                <select
+                  class="form-control py-3 rounded-5"
+                  id="month"
+                  aria-label="Default select example"
+                  onclick="clrmsg()"
+                >
+                  <option selected="" value="">Select Month</option>
+                  <option value="1">Jan</option>
+                  <option value="2">Feb</option>
+                  <option value="3">Mar</option>
+                  <option value="4">Apr</option>
+                  <option value="5">May</option>
+                  <option value="6">Jun</option>
+                  <option value="7">Jul</option>
+                  <option value="8">Aug</option>
+                  <option value="9">Sep</option>
+                  <option value="10">Oct</option>
+                  <option value="11">Nov</option>
+                  <option value="12">Dec</option>
+                </select>
+                <span id="montherror" class="badge text-danger mt-2"></span>
+              </div>
+              <div class="col">
+                <select
+                  class="form-control py-3 rounded-5"
+                  id="day"
+                  aria-label="Default select example"
+                  onclick="clrmsg()"
+                >
+                  <option selected="" value="">Select Day</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+                <span id="dayerror" class="badge text-danger mt-2"></span>
+              </div>
+              <div class="col">
+                <select
+                  class="form-control py-3 rounded-5"
+                  id="year"
+                  aria-label="Default select example"
+                  onclick="clrmsg()"
+                >
+                  <option selected="" value="">Select Year</option>
+                  <option value="1">2022</option>
+                  <option value="2">2021</option>
+                  <option value="3">2020</option>
+                  <option value="4">2019</option>
+                  <option value="5">2018</option>
+                  <option value="6">2017</option>
+                  <option value="7">2016</option>
+                  <option value="8">2015</option>
+                  <option value="9">2014</option>
+                  <option value="10">2013</option>
+                  <option value="11">2012</option>
+                  <option value="12">2011</option>
+                  <option value="13">2010</option>
+                  <option value="14">2009</option>
+                  <option value="15">2008</option>
+                  <option value="16">2007</option>
+                  <option value="17">2006</option>
+                  <option value="18">2005</option>
+                  <option value="19">2004</option>
+                  <option value="20">2003</option>
+                  <option value="21">2002</option>
+                  <option value="22">2001</option>
+                  <option value="23">2000</option>
+                  <option value="24">1999</option>
+                  <option value="25">1998</option>
+                  <option value="26">1997</option>
+                  <option value="27">1996</option>
+                  <option value="28">1995</option>
+                  <option value="29">1994</option>
+                  <option value="30">1993</option>
+                  <option value="31">1992</option>
+                </select>
+                <span id="yearerror" class="badge text-danger mt-2"></span>
+              </div>
+            </div>
+            <p class="fs-5 mt-3">Address</p>
+            <div class="div d-flex gap-4">
+              <div class="col form-floating">
+                <input
+                  type="text"
+                  class="form-control rounded-5"
+                  onkeyup="clrmsg()"
+                  id="address"
+                  placeholder="Street Address"
+                />
+                <label for="floatingInput">Street Address</label>
+              </div>
+            </div>
+            <span id="addresserror" class="badge text-danger"></span>
+            <div class="div d-flex gap-4 my-3">
+              <div class="col">
+                <select
+                  class="form-control py-3 rounded-5"
+                  id="state"
+                  onclick="clrmsg()"
+                  aria-label="Default select example"
+                >
+                  <option selected="" value="">Select State</option>
+                  <option value="J&K">J&K</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Rajhasthan">Rajhasthan</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttrakhand">Uttrakhand</option>
+                </select>
+                <span id="stateerror" class="badge text-danger"></span>
+              </div>
+              <div class="col">
+                <select
+                  class="form-control py-3 rounded-5"
+                  id="city"
+                  onclick="clrmsg()"
+                  aria-label="Default select example"
+                >
+                  <option selected="" value="">Select City</option>
+                  <option value="Rohtak">Rohtak</option>
+                  <option value="Ambala">Ambala</option>
+                  <option value="Anandpursahib">Anandpur Sahib</option>
+                  <option value="Amritsar">Amritsar</option>
+                  <option value="Chandigarh">Chandigarh</option>
+                  <option value="Kurukshetra">Kurukshetra</option>
+                  <option value="Sonipat">Sonipat</option>
+                  <option value="Panipat">Panipat</option>
+                  <option value="Karnal">Karnal</option>
+                  <option value="Rajkot">Rajkot</option>
+                </select>
+                <span id="cityerror" class="badge text-danger"></span>
+              </div>
+            </div>
+            <p class="fs-5 mt-3">Gender</p>
+            <div class="div mt-3 mb-4 d-flex gap-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  onclick="clrmsg()"
+                  name="gender"
+                  value="male"
+                  id="male"
+                />
+                <label class="form-check-label" for="male"> Male </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  onclick="clrmsg()"
+                  name="gender"
+                  id="female"
+                />
+                <label class="form-check-label" for="female"> Female </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  onclick="clrmsg()"
+                  name="gender"
+                  id="other"
+                />
+                <label class="form-check-label" for="other"> Other </label>
+              </div>
+              <span id="maleerror" class="badge text-danger ms-3"></span>
+            </div>
+            <button
+              class="w-25 m-auto btn btn-lg btn-primary rounded-5"
+              type="submit"
+              value="submit"
+            >
+              Sign in
+            </button>
+          </form>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.js"
+      integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="sform.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

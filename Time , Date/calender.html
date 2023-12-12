@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+</head>
+<body>
+    <script>
+// <!-- calender with for loop -->
+
+        document.write("<table border=1>")
+        for (w = 1; w <= 12; w++) {
+            document.write("<td><table>")
+           
+            for (e = 1; e < 32; e++) {
+
+                document.write("<td>" + e + "</td>");
+
+                if (e % 7 == 0) {
+                    document.write("<tr></tr>");
+                }
+            }
+            document.write("</table></td>");
+
+            if (w % 6 == 0) {
+                document.write("<tr></tr>");
+            }
+
+        }
+
+        document.write("</table>")  
+    </script>
+
+    <!-- calender with while loop -->
+    <!-- <script>
+        document.write("<table border=1>");
+        let q = 1;
+        while (q <= 12) {
+            document.write("<td><table>");
+            if (q === 5) {
+                document.write("<table bgcolor = 'red'>");
+
+            }
+            if (q === 12) {
+                document.write("<table bgcolor = 'pink'>");
+
+            }
+
+            let a = 1;
+            while (a < 31) {
+                document.write("<td>" + a + "</td>");
+                if (a % 7 == 0) {
+                    document.write("<tr></tr>");
+                }
+                a++
+            }
+
+            document.write("</td></table>");
+
+            if (q % 6 == 0) {
+                document.write("<tr></tr>");
+
+            }
+            q++
+        }
+        document.write("</table>");
+    </script> -->
+
+    <!-- calender with do while loop -->
+    <!-- <script>
+        document.write("<table border=1>");
+        let k = 1;
+        do {
+            document.write("<td><table>");
+            if (k == 5) {
+                document.write("<table bgcolor= 'red'>")
+            }
+            if (k == 12) {
+                document.write("<table bgcolor= 'yellow'>")
+            }
+            let m = 1;
+            do {
+                document.write("<td>" + m + "</td>");
+
+                if (m % 7 == 0) {
+                    document.write("<tr></tr>");
+                }
+                m++
+
+            }
+            while (m <= 31)
+            document.write("</td></table>");
+
+            if (k % 6 == 0) {
+                document.write("<tr></tr>");
+
+            }
+
+            k++
+        }
+
+        while (k <= 12)
+        document.write("</table>");
+    </script> -->
+    <!-- <script>
+        document.write("<table >")
+        for (w = 1; w <= 12; w++) {
+          
+
+            var month = ["", "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+         
+           
+            document.write("<td><table border=2>")
+               
+            month.forEach((res, index) => {
+                if (index == w) {
+                    document.write(res);
+                }
+            });
+
+            for (e = 1; e < 31; e++) {
+              
+          document.write("<td>" + e + "</td>");
+         
+                if (e % 7 == 0) {
+                    document.write("<tr></tr>");
+                }
+            
+            }
+
+            document.write("</td></table>")
+            if (w % 4 == 0) {
+                document.write("<tr></tr>");
+            }
+        }
+        document.write("</table>")
+    </script> -->
+       <!-- <script>
+  document.write("<table>")
+        for (w = 1; w <= 12; w++) {
+            var month = ["", "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+            document.write("<td><table border=2>")
+            month.forEach((res, index) => {
+                if (index == w) {
+                    document.write(res);
+                }
+            });
+            for (e = 1; e < 31; e++) {
+          document.write("<td>" + e + "</td>");
+         
+                if (e % 7 == 0) {
+                    document.write("<tr></tr>");
+                }
+            }
+            document.write("</td></table>")
+            
+            if (w % 4 == 0) {
+                document.write("<tr></tr>");
+            }
+
+        }
+        document.write("</table>")
+       </script> -->
+        
+    </script>
+</body>
+</html>

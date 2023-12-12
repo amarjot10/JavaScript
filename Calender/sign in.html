@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="col-7 pt-5 form-signin m-auto">
+      <form method="post" onsubmit="return loginSubmit()">
+        <div class="text-center">
+          <img
+            class="mb-4 rounded-circle"
+            src="https://lh3.googleusercontent.com/a/ALm5wu0axv67ghiRarSekCuClh1ngBi2mcn8CS8Ua6SGww=s288-p-rw-no"
+            alt=""
+            width="100"
+            height="100"
+          />
+          <h1 class="h3 mb-3 fw-semibold">Sign In</h1>
+        </div>
+        <div class="col-12">
+          <div class="div d-flex gap-2">
+            <div class="form-floating col mb-2">
+              <input
+                type="name"
+                class="form-control"
+                onkeyup="clrMsg()"
+                id="firstname"
+                placeholder="Name"
+              />
+              <label for="floatingInput">First Name</label>
+              <span id="firstnameError" class="badge mt-2 bg-danger"></span>
+            </div>
+            <div class="form-floating col mb-2 ms-auto">
+              <input
+                type="name"
+                class="form-control"
+                onkeyup="clrMsg()"
+                id="lastname"
+                placeholder="Name"
+              />
+              <label for="floatingInput">Last Name</label>
+              <span id="lastnameError" class="badge mt-2 bg-danger"></span>
+            </div>
+          </div>
+          <div class="form-floating mb-2">
+            <input
+              type="text"
+              class="form-control"
+              onkeyup="clrMsg()"
+              id="address"
+              placeholder="address"
+            />
+            <label for="floatingInput">Address</label>
+          </div>
+          <span id="addressError" class="badge mb-2 bg-danger"></span>
+          <div class="form-floating mb-2">
+            <input
+              type="email"
+              class="form-control"
+              onkeyup="clrMsg()"
+              id="email"
+              placeholder="you@example.com"
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <span id="emailError" class="badge mb-2 bg-danger"></span>
+          <div class="div d-flex gap-2">
+            <div class="col form-floating mb-2">
+              <input
+                type="text"
+                class="form-control"
+                onkeyup="clrMsg()"
+                id="phone"
+                placeholder="phone"
+              />
+              <label for="floatingInput">Phone Number</label>
+              <span id="phoneError" class="badge mt-2 bg-danger"></span>
+            </div>
+            <div class="col form-floating mb-2 ms-auto">
+              <input
+                type="password"
+                class="form-control"
+                onkeyup="clrMsg()"
+                id="password"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+              <span id="passwordError" class="badge mt-2 bg-danger"></span>
+            </div>
+            <div class="col form-floating mb-2 ms-auto">
+              <input
+                type="password"
+                class="form-control"
+                onkeyup="clrMsg()"
+                id="cpassword"
+                placeholder="Confirm Password"
+              />
+              <label for="floatingPassword">Confirm Password</label>
+              <span id="cpasswordError" class="badge mt-2 bg-danger"></span>
+            </div>
+          </div>
+          <p class="fs-5 mb-0 fw-semibold">Birth Date</p>
+          <div class="div d-flex my-2 gap-2"> 
+          <div class="col">
+            <select
+              class="form-select py-3"
+              id="month"
+              aria-label="Default select example"
+              onclick="clrMsg()"
+            >
+              <option selected value="">Month</option>
+              <option value="1">Jan</option>
+              <option value="2">Feb</option>
+              <option value="3">Mar</option>
+              <option value="4">Apr</option>
+              <option value="5">May</option>
+              <option value="6">Jun</option>
+              <option value="7">Jul</option>
+              <option value="8">Aug</option>
+              <option value="9">Sep</option>
+              <option value="10">Oct</option>
+              <option value="11">Nov</option>
+              <option value="12">Dec</option>
+            </select>
+            <span id="monthError" class="badge bg-danger mt-2"></span>
+          </div>
+          <div class="col">
+            <select
+              class="form-select py-3"
+              id="day"
+              aria-label="Default select example"
+              onclick="clrMsg()"
+            >
+              <option selected value="">Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <span id="dayError" class="badge bg-danger mt-2"></span>
+
+          </div>
+          <div class="col">
+            <select
+              class="form-select py-3"
+              id="year"
+              aria-label="Default select example"
+              onclick="clrMsg()"
+            >
+              <option selected value="">Year</option>
+              <option value="1">2022</option>
+              <option value="2">2021</option>
+              <option value="3">2020</option>
+              <option value="4">2019</option>
+              <option value="5">2018</option>
+              <option value="6">2017</option>
+              <option value="7">2016</option>
+              <option value="8">2015</option>
+              <option value="9">2014</option>
+              <option value="10">2013</option>
+              <option value="11">2012</option>
+              <option value="12">2011</option>
+              <option value="13">2010</option>
+              <option value="14">2009</option>
+              <option value="15">2008</option>
+              <option value="16">2007</option>
+              <option value="17">2006</option>
+              <option value="18">2005</option>
+              <option value="19">2004</option>
+              <option value="20">2003</option>
+              <option value="21">2002</option>
+              <option value="22">2001</option>
+              <option value="23">2000</option>
+              <option value="24">1999</option>
+              <option value="25">1998</option>
+              <option value="26">1997</option>
+              <option value="27">1996</option>
+              <option value="28">1995</option>
+              <option value="29">1994</option>
+              <option value="30">1993</option>
+              <option value="31">1992</option>
+            </select>
+            <span id="yearError" class="badge bg-danger mt-2"></span>
+          </div>
+          </div>
+          <p class="fs-5 mb-0 fw-semibold">Gender</p>
+          <div class="div my-3 d-flex gap-3" >
+            <div class="form-check" >
+              <input class="form-check-input" type="radio" onclick="clrMsg()" name="gender" value="male" id="male">
+              <label class="form-check-label" for="male">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" onclick="clrMsg()" name="gender" id="female">
+              <label class="form-check-label" for="female">
+                Female
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" onclick="clrMsg()" name="gender" id="other">
+              <label class="form-check-label" for="other">
+                Other
+              </label>
+            </div>
+            <span id="maleError" class="badge bg-danger ms-5"></span>
+          </div>
+          <form class="mt-2 mb-1">
+            <p class="fs-5 mb-0 fw-semibold mb-1">What's Your Hobies?</p>
+            <textarea wrap="virtual" name="Comments"
+            id="hobies"
+            rows=4 cols=104
+            maxlength=100></textarea>
+          </form>
+          <span id="hobiesError" class="badge bg-danger mt-2"></span>
+            <div class="div d-flex gap-2 my-2">
+            <input type="checkbox">
+            <label class="fw-semibold">Remember me</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">
+            Sign in
+          </button>
+          <p class="mt-4 mb-3 text-muted">© 2017–2022</p>
+        </div>
+      </form>
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function loginSubmit() {
+        var firstname = document.getElementById("firstname").value;
+        var lastname = document.getElementById("lastname").value;
+        var address = document.getElementById("address").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        var cpassword = document.getElementById("cpassword").value;
+        var month = document.getElementById("month").value;
+        var day = document.getElementById("day").value;
+        var year = document.getElementById("year").value;
+        var male = document.getElementById("male").checked;
+        var hobies = document.getElementById("hobies").value;
+
+        if (firstname == "") {
+          document.getElementById("firstnameError").innerHTML =
+            "Please Enter Your First Name!";
+          return false;
+        }
+        if (lastname == "") {
+          document.getElementById("lastnameError").innerHTML =
+            "Please Enter Your Last Name!";
+          return false;
+        }
+        if (address == "") {
+          document.getElementById("addressError").innerHTML =
+            "Please Enter Your Address!";
+          return false;
+        }
+        if (email == "") {
+          document.getElementById("emailError").innerHTML =
+            "Please Enter Your Email Address!";
+          return false;
+        }
+        if (phone == "") {
+          document.getElementById("phoneError").innerHTML =
+            "Please Enter Your Phone Number!";
+          return false;
+        }
+        if (password == "") {
+          document.getElementById("passwordError").innerHTML =
+            "Please Enter Your Password!";
+          return false;
+        }
+        if (cpassword == "") {
+          document.getElementById("cpasswordError").innerHTML =
+            "Please Enter Your Confirm Password!";
+          return false;
+        }
+        if (month == "") {
+          document.getElementById("monthError").innerHTML =
+            "Please Enter Month!";
+          return false;
+        }
+        if (day == "") {
+          document.getElementById("dayError").innerHTML =
+            "Please Enter Day!";
+          return false;
+        }
+        if (year == "") {
+          document.getElementById("yearError").innerHTML =
+            "Please Enter Year!";
+          return false;
+        }
+        if (male==false) {
+          document.getElementById("maleError").innerHTML ="Please Enter Your Gender!";
+          return false;
+        }
+
+        if (hobies == "") {
+          document.getElementById("hobiesError").innerHTML =
+            "Please Enter Your Hobies!";
+          return false;
+        }
+
+        return false;
+      }
+
+      function clrMsg() {
+        document.getElementById("firstnameError").innerHTML = "";
+        document.getElementById("lastnameError").innerHTML = "";
+        document.getElementById("addressError").innerHTML = "";
+        document.getElementById("emailError").innerHTML = "";
+        document.getElementById("phoneError").innerHTML = "";
+        document.getElementById("passwordError").innerHTML = "";
+        document.getElementById("cpasswordError").innerHTML = "";
+        document.getElementById("monthError").innerHTML = "";
+        document.getElementById("dayError").innerHTML = "";
+        document.getElementById("yearError").innerHTML = "";
+        document.getElementById("maleError").innerHTML = "";
+        document.getElementById("hobiesError").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
